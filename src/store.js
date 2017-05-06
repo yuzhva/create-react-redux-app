@@ -10,9 +10,9 @@ const middleware = routerMiddleware(history);
 
 const store = createStore(
   combineReducers({
-    router: routerReducer
+    router: routerReducer,
   }),
-  applyMiddleware(middleware)
+  applyMiddleware(middleware),
 );
 
 export default store;

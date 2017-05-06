@@ -8,7 +8,7 @@ import App from './App';
 
 const routes = (
   <ConnectedRouter history={history}>
-    <Route path="/" component={App}/>
+    <Route path="/" component={App} />
   </ConnectedRouter>
 );
 export default routes;
