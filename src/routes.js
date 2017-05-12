@@ -4,7 +4,7 @@ import { ConnectedRouter } from 'react-router-redux';
 
 import { history } from './store';
 
-import App from './App';
+import App from './containers/App';
 
 const routes = (
   <ConnectedRouter history={history}>
