@@ -10,6 +10,8 @@
     "import"
   ],
   "rules": {
+    "arrow-parens": ["error", "always"],
+    "react/forbid-prop-types": 0,
     "react/jsx-filename-extension": 0
   }
 }

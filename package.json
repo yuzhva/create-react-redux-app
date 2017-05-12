@@ -4,6 +4,8 @@
   "private": true,
   "dependencies": {
     "history": "^4.6.1",
+    "immutable": "^3.8.1",
+    "prop-types": "^15.5.10",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-redux": "^5.0.4",

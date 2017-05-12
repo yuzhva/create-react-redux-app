@@ -1,7 +1,9 @@
-import { createStore, combineReducers, applyMiddleware } from 'redux';
-import { routerMiddleware, routerReducer } from 'react-router-redux';
+import { createStore, applyMiddleware } from 'redux';
+import { routerMiddleware } from 'react-router-redux';
 
 import createHistory from 'history/createBrowserHistory';
+
+import createGlobalReducer from './global-reducer';
 
 export const history = createHistory();
 
@@ -9,9 +11,7 @@ export const history = createHistory();
 const middleware = routerMiddleware(history);
 
 const store = createStore(
-  combineReducers({
-    router: routerReducer,
-  }),
+  createGlobalReducer(),
   applyMiddleware(middleware),
 );
 
