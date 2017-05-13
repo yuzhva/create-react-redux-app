@@ -1,4 +1,4 @@
-@import url('~/src/containers/App/styles.css');
+@import url('./../containers/App/styles.css');
 
 body {
   margin: 0;

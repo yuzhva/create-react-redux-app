@@ -4,9 +4,9 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
 import { getAPIData } from './actions';
+import { selectApiData } from './selectors';
 
 import logo from './logo.svg';
-import './styles.css';
 
 class App extends Component {
   componentWillMount() {
@@ -23,17 +23,25 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
+        <p className="App-intro">
+          Your IP is: {this.props.apiData && this.props.apiData.origin.split(', ')[1]}
+        </p>
       </div>
     );
   }
 }
 
+App.defaultProps = {
+  apiData: {},
+};
+
 App.propTypes = {
   actions: PropTypes.object.isRequired,
+  apiData: PropTypes.object,
 };
 
 const mapStateToProps = (state) => ({
-  testData: state,
+  apiData: selectApiData(state),
 });
 
 const mapDispatchToProps = (dispatch) => ({
