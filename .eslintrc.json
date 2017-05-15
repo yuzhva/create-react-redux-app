@@ -1,0 +1,17 @@
+{
+  "extends": "airbnb",
+  "env": {
+    "browser": true,
+    "jest": true
+  },
+  "plugins": [
+    "react",
+    "jsx-a11y",
+    "import"
+  ],
+  "rules": {
+    "arrow-parens": ["error", "always"],
+    "react/forbid-prop-types": 0,
+    "react/jsx-filename-extension": 0
+  }
+}
