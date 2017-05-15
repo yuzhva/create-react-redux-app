@@ -20,13 +20,22 @@
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "4.0.0",
     "eslint-plugin-react": "^7.0.0",
+    "lint-staged": "^3.4.1",
+    "pre-commit": "^1.2.2",
     "react-scripts": "0.9.5"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "npm run lint:js",
+    "lint:staged": "lint-staged",
+    "lint:js": "eslint --ext .js src/"
   },
-   "proxy": "https://httpbin.org"
+  "pre-commit": "lint:staged",
+  "lint-staged": {
+    "*.js": "lint:js"
+  },
+  "proxy": "https://httpbin.org"
 }

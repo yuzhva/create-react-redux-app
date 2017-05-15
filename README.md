@@ -1,17 +1,16 @@
 # Create react redux app
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).<br>
 The project includes extra redux packages and improved file structure.
 
 ## Table of Contents
-- [Dependencies that was added to app created with create-react-app](
-  #dependencies-that-was-added-to-app-created-with-create-react-app)
+- [Dependencies that was added to app created with create-react-app](#dependencies-that-was-added-to-the-app)
 - [Quick start](#quick-start)
 - [Improved folder Structure](#improved-folder-structure)
 - [Available Scripts](#available-scripts)
 - [Table of Contents for react-scripts](
-  https://github.com/YUzhva/react-leaflet-markercluster/edit/master/README.md)
+  https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md)
 
-## Dependencies that was added to app created with create-react-app
+## Dependencies that was added to the app
 - redux
 - react-redux
 - redux-saga
@@ -42,7 +41,7 @@ mv create-react-redux-app NEW_PROJECT_NAME
 rename create-react-redux-app NEW_PROJECT_NAME
 ```
 
-**3.** Go inside project folder `cd NEW_PROJECT_NAME` and edit project name inside package.json
+**3.** Go inside project folder `cd NEW_PROJECT_NAME` and edit project name inside `package.json`
 ```javascript
 // change
 {
