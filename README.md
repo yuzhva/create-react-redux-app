@@ -1,25 +1,95 @@
 # Create react redux app
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+The project includes extra redux packages and improved file structure.
 
-## Folder Structure
+## Table of Contents
+- [Dependencies that was added to app created with create-react-app](
+  #dependencies-that-was-added-to-app-created-with-create-react-app)
+- [Quick start](#quick-start)
+- [Improved folder Structure](#improved-folder-structure)
+- [Available Scripts](#available-scripts)
+- [Table of Contents for react-scripts](
+  https://github.com/YUzhva/react-leaflet-markercluster/edit/master/README.md)
 
-After creation, your project should look like this:
+## Dependencies that was added to app created with create-react-app
+- redux
+- react-redux
+- redux-saga
+- immutable
+- react-router-dom
+- react-router-redux
+
+devDependencies:
+- eslint (based on Airbnb rules)
+- pre-commit
+
+## Quick start
+**1.** Clone project
+```bash
+# with SSH
+git clone git@github.com:YUzhva/create-react-redux-app.git
+
+# with HTTPS
+git clone https://github.com/YUzhva/create-react-redux-app.git
+```
+
+**2.** Rename project
+```bash
+# command for Mac/Linux
+mv create-react-redux-app NEW_PROJECT_NAME
+
+# command for Windows
+rename create-react-redux-app NEW_PROJECT_NAME
+```
+
+**3.** Go inside project folder `cd NEW_PROJECT_NAME` and edit project name inside package.json
+```javascript
+// change
+{
+  "name": "create-react-redux-app",  
+}
+
+// to the
+{
+  "name": "NEW_PROJECT_NAME",  
+}
+```
+
+**4.** Delete .git folder
+```bash
+# command for Mac/Linux
+rm -rf .git
+
+# command for Windows
+rmdir .git
+```
+
+**5.** Initialize new git
+```bash
+git init
+git add .
+git commit -m "[initial commit] NEW_PROJECT_NAME"
+```
+
+:beer: Have fun :beer: (=
+
+## Improved folder Structure
 
 ```
-my-app/
-  README.md
-  node_modules/
-  package.json
-  public/
-    index.html
-    favicon.ico
-  src/
-    App.css
-    App.js
-    App.test.js
-    index.css
-    index.js
-    logo.svg
+- src
+  - components // reusable react components without redux
+    * ContainerName
+      tests
+      index.js // entry point for component
+
+  - containers // react components with redux and redux-saga data fetching
+    * ContainerName
+      tests
+      index.js // entry point for container
+      constants/actions/reducer/sagas/selectors.js // place container required files in root
+
+  - global-reducer.js // connect other containers reducers here
+  - global-sagas.js // connect other containers sagas here
 ```
 
 For the project to build, **these files must exist with exact filenames**:
@@ -54,6 +124,9 @@ You will also see any lint errors in the console.
 
 Launches the test runner in the interactive watch mode.<br>
 See the section about [running tests](#running-tests) for more information.
+
+### `npm run lint`
+Lints your JavaScript.
 
 ### `npm run build`
 

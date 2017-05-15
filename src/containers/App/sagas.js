@@ -6,9 +6,11 @@ import {
   GET_API_DATA,
 } from './constants';
 
-// Data downloading using pure JS fetch
-// @type: object
-// { result: resultObj, error: errorObj }
+/**
+  Data downloading using pure JS fetch
+  @type: JS object
+  { result: resultObj, error: errorObj }
+**/
 const fetchData = (url, options) => {
   const fetchRequest = new Request(url, options);
 
