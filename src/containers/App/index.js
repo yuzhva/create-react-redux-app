@@ -8,6 +8,10 @@ import { selectApiData } from './selectors';
 
 import logo from './images/logo.svg';
 
+const getMyIp = (apiData) => (
+   (apiData && apiData.origin) && apiData.origin.split(', ')[1]
+);
+
 class App extends Component {
   componentWillMount() {
     this.props.actions.getAPIData();
@@ -24,7 +28,7 @@ class App extends Component {
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
         <p className="app-intro">
-          Your IP is: {this.props.apiData && this.props.apiData.origin.split(', ')[1]}
+          Your IP is: {getMyIp(this.props.apiData)}
         </p>
       </div>
     );
