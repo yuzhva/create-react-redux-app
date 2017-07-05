@@ -26,22 +26,13 @@ devDependencies:
 **1.** Clone project
 ```bash
 # with SSH
-git clone git@github.com:YUzhva/create-react-redux-app.git
+git clone git@github.com:YUzhva/create-react-redux-app.git NEW_PROJECT_NAME
 
 # with HTTPS
-git clone https://github.com/YUzhva/create-react-redux-app.git
+git clone https://github.com/YUzhva/create-react-redux-app.git NEW_PROJECT_NAME
 ```
 
-**2.** Rename project
-```bash
-# command for Mac/Linux
-mv create-react-redux-app NEW_PROJECT_NAME
-
-# command for Windows
-rename create-react-redux-app NEW_PROJECT_NAME
-```
-
-**3.** Go inside project folder `cd NEW_PROJECT_NAME` and edit project name inside `package.json`
+**2.** Go inside project folder `cd NEW_PROJECT_NAME` and edit project name inside `package.json`
 ```javascript
 // change
 {
@@ -54,7 +45,7 @@ rename create-react-redux-app NEW_PROJECT_NAME
 }
 ```
 
-**4.** Delete .git folder
+**3.** Delete .git folder
 ```bash
 # command for Mac/Linux
 rm -rf .git
@@ -63,7 +54,7 @@ rm -rf .git
 rmdir .git
 ```
 
-**5.** Initialize new git
+**4.** Initialize new git
 ```bash
 git init
 git add .
@@ -77,7 +68,7 @@ git commit -m "[initial commit] NEW_PROJECT_NAME"
 ```
 - src
   - components // reusable react components without redux
-    * ContainerName
+    * ComponentName
       tests
       index.js // entry point for component
 

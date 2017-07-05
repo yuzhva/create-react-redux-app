@@ -21,6 +21,6 @@ const store = createStore(
   applyMiddleware(...middlewares),
 );
 
-sagaMiddleware.run(...globalSagas);
+sagaMiddleware.run(globalSagas);
 
 export default store;
