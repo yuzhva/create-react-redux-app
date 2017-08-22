@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
+import { Icon } from 'semantic-ui-react';
 
 import { getAPIData } from './actions';
 import { selectApiData } from './selectors';
@@ -28,7 +29,7 @@ class App extends Component {
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
         <p className="app-intro">
-          Your IP is: {getMyIp(this.props.apiData)}
+          <Icon name="desktop" /> Your IP is: {getMyIp(this.props.apiData)}
         </p>
       </div>
     );

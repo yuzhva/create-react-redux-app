@@ -13,7 +13,9 @@
     "react-router-dom": "^4.1.2",
     "react-router-redux": "^5.0.0-alpha.6",
     "redux": "^3.7.2",
-    "redux-saga": "^0.15.6"
+    "redux-saga": "^0.15.6",
+    "semantic-ui-css": "^2.2.12",
+    "semantic-ui-react": "^0.71.5"
   },
   "devDependencies": {
     "eslint": "4.5.0",
