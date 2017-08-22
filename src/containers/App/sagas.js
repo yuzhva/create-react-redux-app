@@ -6,19 +6,19 @@ import {
   GET_API_DATA,
 } from './constants';
 
-/**
+/*
   Data downloading using pure JS fetch
   @type: JS object
   { result: resultObj, error: errorObj }
-**/
+*/
 const fetchData = (url, options) => {
   const fetchRequest = new Request(url, options);
 
   return fetch(fetchRequest)
-  .then((response) => (
-    response.json().then((result) => ({ result }))
-  ))
-  .catch((error) => ({ error }));
+    .then((response) => (
+      response.json().then((result) => ({ result }))
+    ))
+    .catch((error) => ({ error }));
 };
 
 function* getApiData() {
