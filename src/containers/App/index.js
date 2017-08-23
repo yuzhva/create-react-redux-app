@@ -9,7 +9,7 @@ import { selectApiData } from './selectors';
 import logo from './images/logo.svg';
 
 const getMyIp = (apiData) => (
-   (apiData && apiData.origin) && apiData.origin.split(', ')[1]
+  (apiData && apiData.origin) && apiData.origin.split(', ')[1]
 );
 
 class App extends Component {
